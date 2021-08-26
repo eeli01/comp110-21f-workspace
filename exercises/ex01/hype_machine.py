@@ -1,5 +1,8 @@
-# TODO: Write docstring here
+"""EX01 rough draft."""
 
-# TODO: Initialize __author__ variable here
+_author_ = 730319741
 
-# TODO: Implement your program logic here
+name: str = input("What is your name? ")
+print("Woah, " + name + " you're great! ")
+print(name + " you are doing amazing.")
+print("Keep it up, " + name)
