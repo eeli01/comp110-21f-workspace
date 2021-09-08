@@ -1,6 +1,6 @@
-"""EX01 rough draft."""
+"""Final Draft."""
 
-_author_ = 730319741
+__author__ = "730319741"
 
 name: str = input("What is your name? ")
 print("Woah, " + name + " you're great! ")

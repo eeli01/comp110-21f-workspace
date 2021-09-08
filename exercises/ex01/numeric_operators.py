@@ -1,6 +1,6 @@
-"""numeric_operators trial 1."""
+"""Final draft."""
 
-_author_ = 730319741
+__author__ = "730319741"
 
 left_hand_side: int = int(input("Left-hand side: "))
 right_hand_side: int = int(input("Right-hand side: "))
