@@ -5,7 +5,6 @@ __author__ = "730319741"
 points: int = 0
 player: str = ""
 ghost: str = "\U0001F47B"
-i: int = -1
  
 
 def greet() -> None:
@@ -56,7 +55,7 @@ def choice_1() -> None:
 def cavern_room() -> None:
     """What happens if door 1 is chosen."""
     global points
-    print("You stepped through the door and there is a pit of lava in front of you. To your right there are two dice and you roll them.")
+    print(f"{player}, you stepped through the door and there is a pit of lava in front of you. To your right there are two dice and you roll them.")
     from random import randint
     roll: int = randint(2, 12)
     if roll >= 6:

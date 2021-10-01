@@ -11,6 +11,7 @@ if maximum <= 0:
     print("No beat...")
 else:
     while counter < maximum - 1:
-        counter = counter + 1
         beat = beat + " " + oneBeat
-    print(beat)
+        counter = counter + 1
+        print(beat)
+        
