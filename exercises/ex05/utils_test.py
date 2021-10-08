@@ -33,7 +33,7 @@ def test_sub_first_and_last_numbers() -> None:
 
 def test_sub_middle_numbers() -> None:
     """Tests to give back the numbers in middle of list."""
-    assert sub([10, 20, 30, 40], 2, 3) == [20, 30]
+    assert sub([10, 20, 30, 40], 2, 4) == [30, 40]
 
 
 def test_concat_two_empty_lists() -> None:
