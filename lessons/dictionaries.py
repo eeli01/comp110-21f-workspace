@@ -22,7 +22,7 @@ print(f"UNC has {schools['UNC']} students")
 # by its key
 schools.pop("Duke")
 
-# Test for existance of a key
+# Test for existence of a key
 is_duke_present: bool = "Duke" in schools
 print(f"Duke is present: {is_duke_present}")
 
@@ -40,7 +40,7 @@ print(schools)
 
 # Demonstration of dictionary literals
 
-# Empty dictionary lister
+# Empty dictionary literal
 schools = {}  # same as dict()
 print(schools)
 
