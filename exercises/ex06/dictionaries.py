@@ -38,6 +38,7 @@ def favorite_color(favorites: dict[str, str]) -> str:
 
 
 def count(a_list: list[str]) -> dict[str, int]:
+    """Given a list of strings, create a dictionary of the strings and how many times they ocurr."""
     result = {}
     for item in a_list:
         if item in result.keys():

@@ -7,8 +7,8 @@ __author__ = "730319741"
 
 
 def test_invert_duplicate_keys() -> None: 
-    """Tests edge case when there are duplicate keys in key-value pair."""
-    assert invert({"a": "apple", "b": "apple"}) == KeyError("There is a duplicate value in dictionary.")
+    """Tests edge case whith an empty dictionary."""
+    assert invert({}) == {}
 
 
 def test_invert_one_pair() -> None:
@@ -32,7 +32,7 @@ def test_favorite_color_three_pair_two_color() -> None:
 
 
 def test_favorite_color_four_pair_two_color() -> None:
-    """Tests use case with four key-value pairs with one duplicate color"""
+    """Tests use case with four key-value pairs with one duplicate color."""
     assert favorite_color({"eli": "blue", "emily": "yellow", "bri": "yellow", "hannah": "yellow"}) == "yellow"
 
 
