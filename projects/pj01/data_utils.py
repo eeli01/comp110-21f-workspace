@@ -1,7 +1,6 @@
-"""Utility functions."""
+"""Utility Functitons."""
 
 __author__ = "730319741"
-
 
 from csv import DictReader
 
@@ -9,11 +8,22 @@ from csv import DictReader
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
     """Read the rows of a csv into a 'table'."""
     result: list[dict[str, str]] = []
+
+    # Open a handle to data file
     file_handle = open(filename, "r", encoding="utf8")
+
+    # Prepare to read data file as CSV rather than just strings
     csv_reader = DictReader(file_handle)
+
+    # Read each row of he CSV line-by-line
     for row in csv_reader:
         result.append(row)
+
+    # Read that file
+
+    # Close the file when we're done, to free its resources.
     file_handle.close()
+
     return result
 
 
@@ -39,15 +49,14 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(columns: dict[str, list[str]], rows: int) -> dict[str, list[str]]:
     """Make table with only a select number of rows of data for each column."""
     result = {}
-    for key in columns:
-        values = []
-        i: int = 0
-        if rows > len(columns):
-            rows = len(columns)
-        while i < rows: 
-            values.append(columns[key][i])
-            i += 1
-        result[key] = values
+    if rows > len(columns):
+        for key in columns:
+            values = []
+            i: int = 0
+            while i < rows: 
+                values.append(columns[key][i])
+                i += 1
+            result[key] = values
     return result
 
 
@@ -56,7 +65,6 @@ def select(column_table: dict[str, list[str]], names: list[str]) -> dict[str, li
     result: dict[str, list[str]] = {}
     # Loop through columns in second parameter
     for key in names:
-        # Column key assigned to list sored in input dictionary at the same column
         result[key] = column_table[key]
     return result
 
