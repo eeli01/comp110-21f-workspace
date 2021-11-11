@@ -100,3 +100,20 @@ def count(values: list[str]) -> dict[str, int]:
         else: 
             result[key] = 1
     return result
+
+
+def filter(input: list[str]) -> list[str]:
+    """Filters out any value of the dictionary less than 5."""
+    filtered_list: list[str] = list()
+    i: int = 0
+    while i < len(input):
+        if input[i] == "5": 
+            filtered_list.append(input[i])
+        else: 
+            if input[i] == "6":
+                filtered_list.append(input[i])
+            else: 
+                if input[i] == "7":
+                    filtered_list.append(input[i])
+        i += 1
+    return filtered_list
